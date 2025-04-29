@@ -4,33 +4,37 @@
 ---
 
 ### AIM  
-To write a Python program to print a triangular star pattern using loops.
 
----
+To write a Python program that prints a right-angled triangle pattern of asterisks (*) based on the number of rows entered by the user.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Read the integer `n` from the user using `input()`. This will determine the number of rows in the pattern.  
-3. Initialize a variable `i = 0`. This will help adjust the spacing before the stars.  
-4. Loop through rows from `0` to `n - 1`:  
-   - For each row, calculate the number of spaces to print using the formula: `((n - rows - 1) * 2) + i`.  
-   - Print the calculated number of spaces using `print(" ", end="")`.  
-   - Increment `i` by 1 after each row.  
-   - Print stars using a nested loop: the number of stars in each row is `rows + 1`, printed using `print("*", end="  ")`.  
-   - Print a newline after each row using `print("")` to move to the next line.  
-5. Terminate the program.
+Start the program.
+Input the number of rows n from the user.
+Define a function pattern(n) to print the pattern.
+Use an outer loop from i = 1 to i = n (inclusive) to iterate over each row.
+Within the outer loop, use an inner loop from j = 0 to j < i to print i asterisks in the current row.
+After printing each row of asterisks, move to the next line using print().
+Call the function with the user input value n.
+End the program.
 
 ---
 
 ### PROGRAM
 ```
-#Reg.No:
-#Name:
 #Add Your Code Here
-
+def pattern (n):
+    for i in range(1, n+1):
+        for j in range(i):
+            print('*', end=' ')
+        print()
+        
+n = int(input(""))        
+pattern(n)
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/6b18eb68-b93f-40ea-8ab1-805b66a30640)
 
 ### RESULT
+Thus the program LOOPING PATTERNS - PRINTING PATTERN have been executed and verified sucessfully
